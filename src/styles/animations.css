@@ -1,0 +1,36 @@
+@layer utilities {
+  .transition-gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .animate-hover {
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-click {
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-focus {
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-modal {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-page {
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .animate-hover,
+    .animate-click,
+    .animate-focus,
+    .animate-modal,
+    .animate-page {
+      transition: none;
+    }
+  }
+}
